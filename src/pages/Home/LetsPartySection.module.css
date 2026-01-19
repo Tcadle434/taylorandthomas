@@ -1,0 +1,143 @@
+.section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #F5E6E0 0%,
+    #E8A598 50%,
+    #C9A86C 100%
+  );
+}
+
+/* Falling confetti field */
+.confettiField {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confettiPiece {
+  position: absolute;
+  top: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confettiPiece.square {
+  border-radius: 2px;
+}
+
+.confettiPiece.rectangle {
+  border-radius: 1px;
+}
+
+.confettiPiece.circle {
+  border-radius: 50%;
+}
+
+/* Sparkle field */
+.sparkleField {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+}
+
+/* Firework burst rings */
+.burstField {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.burstRing {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+/* Main content */
+.content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.now,
+.lets,
+.party {
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.now {
+  font-size: var(--text-4xl);
+  color: var(--color-charcoal);
+  opacity: 0.7;
+}
+
+.lets {
+  font-size: var(--text-5xl);
+  color: var(--color-charcoal);
+}
+
+.party {
+  font-size: var(--text-8xl);
+  background: linear-gradient(
+    135deg,
+    var(--color-charcoal) 0%,
+    #5C4A3D 50%,
+    var(--color-charcoal) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .now {
+    font-size: var(--text-2xl);
+  }
+
+  .lets {
+    font-size: var(--text-3xl);
+  }
+
+  .party {
+    font-size: var(--text-6xl);
+  }
+
+  .burstRing {
+    width: 40px;
+    height: 40px;
+  }
+}

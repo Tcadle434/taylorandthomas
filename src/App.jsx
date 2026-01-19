@@ -1,0 +1,36 @@
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import Home from './pages/Home/Home'
+import Schedule from './pages/Schedule/Schedule'
+import Travel from './pages/Travel/Travel'
+import Gallery from './pages/Gallery/Gallery'
+import FAQs from './pages/FAQs/FAQs'
+import RSVP from './pages/RSVP/RSVP'
+import './App.css'
+
+function App() {
+  const location = useLocation()
+
+  return (
+    <div className="app">
+      <Navigation />
+      <main className="main">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/travel" element={<Travel />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/faqs" element={<FAQs />} />
+            <Route path="/rsvp" element={<RSVP />} />
+          </Routes>
+        </AnimatePresence>
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default App

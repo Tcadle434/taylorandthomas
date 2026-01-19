@@ -1,0 +1,242 @@
+.page {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-16);
+  background-color: var(--color-cream);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--color-charcoal-light);
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-blush);
+}
+
+.dateDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.day {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.date {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  line-height: 1;
+}
+
+.year {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-charcoal-light);
+}
+
+.timeline {
+  margin-bottom: var(--space-10);
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: var(--space-1);
+  box-shadow: 0 0 0 4px rgba(201, 168, 108, 0.2);
+}
+
+.timelineContent {
+  flex: 1;
+}
+
+.eventTime {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+}
+
+.eventTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.eventDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-charcoal-light);
+  margin: 0;
+}
+
+.venue {
+  background-color: var(--color-blush);
+  border-radius: 8px;
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.venueHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.venueIcon {
+  color: var(--color-gold);
+}
+
+.venueName {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.venueAddress {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-style: normal;
+  color: var(--color-charcoal-light);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.venueLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-gold);
+  transition: color var(--transition-fast);
+}
+
+.venueLink:hover {
+  color: var(--color-gold-dark);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.dresscode {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.dresscodeTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-light);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.dresscodeText {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  color: var(--color-gold);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.dresscodeDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-charcoal-light);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: calc(var(--nav-height) + var(--space-8));
+  }
+
+  .title {
+    font-size: var(--text-4xl);
+  }
+
+  .card {
+    padding: var(--space-6);
+  }
+
+  .date {
+    font-size: var(--text-4xl);
+  }
+}

@@ -1,0 +1,140 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-cream);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.palmSilhouette {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 40%;
+  height: 60%;
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(201, 168, 108, 0.05) 60%,
+    rgba(201, 168, 108, 0.1) 80%
+  );
+  filter: blur(40px);
+  transform: rotate(-15deg);
+}
+
+.oceanHorizon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(
+    to top,
+    rgba(232, 165, 152, 0.08),
+    transparent
+  );
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.ringsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-12);
+}
+
+.ringWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring {
+  width: 80px;
+  height: 80px;
+  border: 3px solid var(--color-gold);
+  border-radius: 50%;
+  margin: 0 -15px;
+  box-shadow: 0 0 20px rgba(201, 168, 108, 0.3);
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.names {
+  font-family: var(--font-display);
+  font-size: var(--text-6xl);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-charcoal);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-light);
+  margin: 0;
+}
+
+.scrollIndicator {
+  margin-top: var(--space-8);
+  color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .names {
+    font-size: var(--text-4xl);
+  }
+
+  .ring {
+    width: 60px;
+    height: 60px;
+    margin: 0 -10px;
+  }
+
+  .ringsContainer {
+    margin-bottom: var(--space-8);
+  }
+}

@@ -1,0 +1,143 @@
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronDown, HelpCircle } from 'lucide-react'
+import styles from './FAQs.module.css'
+
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20 },
+}
+
+const faqs = [
+  {
+    id: 1,
+    question: 'Is this a wedding?',
+    answer:
+      "Nope! We're already married. We tied the knot in a beautiful ceremony in Maui. This is a celebration party to share our joy with all of our loved ones who couldn't be there.",
+  },
+  {
+    id: 2,
+    question: 'What should I wear?',
+    answer:
+      'Cocktail attire - dress to celebrate! Think elegant and festive. We want you to feel comfortable and look fabulous.',
+  },
+  {
+    id: 3,
+    question: 'Can I bring a plus one?',
+    answer:
+      "Please RSVP with your guest's name if you're bringing someone. We want to make sure we have enough space and food for everyone!",
+  },
+  {
+    id: 4,
+    question: 'Will there be food?',
+    answer:
+      'Absolutely! We\'ll have delicious appetizers and drinks throughout the evening. It\'s a party, after all!',
+  },
+  {
+    id: 5,
+    question: 'Is parking available?',
+    answer:
+      'Yes, there is parking available near Kingfly Spirits. The Strip District also has street parking and nearby parking lots.',
+  },
+  {
+    id: 6,
+    question: 'What if I have dietary restrictions?',
+    answer:
+      "Please let us know in your RSVP if you have any dietary restrictions or allergies, and we'll do our best to accommodate you.",
+  },
+  {
+    id: 7,
+    question: "I can't make it. How can I celebrate with you?",
+    answer:
+      "We understand not everyone can make it to Pittsburgh. We'd love to hear from you - drop us a note or send us a video message! Your love and support means the world to us.",
+  },
+]
+
+function AccordionItem({ faq, isOpen, onToggle }) {
+  return (
+    <div className={styles.accordionItem}>
+      <button
+        className={`${styles.accordionHeader} ${isOpen ? styles.open : ''}`}
+        onClick={onToggle}
+        aria-expanded={isOpen}
+      >
+        <span className={styles.question}>{faq.question}</span>
+        <ChevronDown
+          size={20}
+          className={`${styles.chevron} ${isOpen ? styles.rotated : ''}`}
+        />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className={styles.accordionContent}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <p className={styles.answer}>{faq.answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+function FAQs() {
+  const [openId, setOpenId] = useState(null)
+
+  const toggleItem = (id) => {
+    setOpenId(openId === id ? null : id)
+  }
+
+  return (
+    <motion.div
+      className={styles.page}
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.5 }}
+    >
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <HelpCircle className={styles.headerIcon} size={40} />
+          <h1 className={styles.title}>Questions & Answers</h1>
+          <p className={styles.subtitle}>Everything you need to know</p>
+        </header>
+
+        <motion.div
+          className={styles.accordion}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          {faqs.map((faq) => (
+            <AccordionItem
+              key={faq.id}
+              faq={faq}
+              isOpen={openId === faq.id}
+              onToggle={() => toggleItem(faq.id)}
+            />
+          ))}
+        </motion.div>
+
+        <motion.div
+          className={styles.moreQuestions}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <h3 className={styles.moreTitle}>Still have questions?</h3>
+          <p className={styles.moreText}>
+            Feel free to reach out to us directly. We're happy to help!
+          </p>
+        </motion.div>
+      </div>
+    </motion.div>
+  )
+}
+
+export default FAQs

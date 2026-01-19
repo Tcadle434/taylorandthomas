@@ -1,0 +1,237 @@
+.page {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-16);
+  background-color: var(--color-cream);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--color-charcoal-light);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-blush);
+  border-radius: 50%;
+  color: var(--color-gold);
+  margin-bottom: var(--space-6);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.airportCode {
+  font-family: var(--font-body);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+}
+
+.airportName {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.cardDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-charcoal-light);
+  margin: 0;
+}
+
+.comingSoon {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-coral-light);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+}
+
+.hotelCard {
+  grid-column: span 1;
+}
+
+.hotelName {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.hotelAddress {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-style: normal;
+  color: var(--color-charcoal-light);
+  line-height: 1.6;
+}
+
+.hotelAddress svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.hotelContact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-charcoal-light);
+}
+
+.hotelContact svg {
+  color: var(--color-gold);
+}
+
+.phoneLink {
+  color: var(--color-charcoal);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.phoneLink:hover {
+  color: var(--color-gold);
+}
+
+.mapSection {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: var(--space-10);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.mapTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.mapDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-charcoal-light);
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+}
+
+.mapPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  height: 300px;
+  background: linear-gradient(
+    135deg,
+    var(--color-blush) 0%,
+    var(--color-cream) 100%
+  );
+  border-radius: 8px;
+  color: var(--color-charcoal-light);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.mapPlaceholder svg {
+  color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: calc(var(--nav-height) + var(--space-8));
+  }
+
+  .title {
+    font-size: var(--text-4xl);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mapSection {
+    padding: var(--space-6);
+  }
+
+  .mapPlaceholder {
+    height: 200px;
+  }
+}
