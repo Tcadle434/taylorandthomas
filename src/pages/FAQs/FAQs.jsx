@@ -26,13 +26,13 @@ const faqs = [
     id: 3,
     question: 'Can I bring a plus one?',
     answer:
-      "Please RSVP with your guest's name if you're bringing someone. We want to make sure we have enough space and food for everyone!",
+      "Please reach out to Thomas and Taylor if they haven't reached out to you already. We have a list of people we may bring plus ones.",
   },
   {
     id: 4,
-    question: 'Will there be food?',
+    question: 'Will there be food and drinks?',
     answer:
-      'Absolutely! We\'ll have delicious appetizers and drinks throughout the evening. It\'s a party, after all!',
+      "Absolutely! We'll have an open bar and food trucks.",
   },
   {
     id: 5,
@@ -40,19 +40,7 @@ const faqs = [
     answer:
       'Yes, there is parking available near Kingfly Spirits. The Strip District also has street parking and nearby parking lots.',
   },
-  {
-    id: 6,
-    question: 'What if I have dietary restrictions?',
-    answer:
-      "Please let us know in your RSVP if you have any dietary restrictions or allergies, and we'll do our best to accommodate you.",
-  },
-  {
-    id: 7,
-    question: "I can't make it. How can I celebrate with you?",
-    answer:
-      "We understand not everyone can make it to Pittsburgh. We'd love to hear from you - drop us a note or send us a video message! Your love and support means the world to us.",
-  },
-]
+  ]
 
 function AccordionItem({ faq, isOpen, onToggle }) {
   return (
