@@ -10,12 +10,9 @@ function WeGotMarriedSection() {
     offset: ['start end', 'end start'],
   })
 
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], [0, 1, 1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], [0.8, 1, 1, 0.9])
-  const y = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], [100, 0, 0, -50])
-
-  const mauiOpacity = useTransform(scrollYProgress, [0.2, 0.4, 0.6, 0.8], [0, 1, 1, 0])
-  const mauiY = useTransform(scrollYProgress, [0.2, 0.4], [30, 0])
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 0.9], [0, 1, 1, 0])
+  const y = useTransform(scrollYProgress, [0, 0.3], [60, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 0.9], [0.9, 1, 1, 0.95])
 
   return (
     <section ref={sectionRef} className={styles.section}>
@@ -23,28 +20,20 @@ function WeGotMarriedSection() {
         <div className={styles.gradientOverlay} />
       </div>
 
-      <div className={styles.content}>
-        <motion.div
-          className={styles.mainText}
-          style={{ opacity, scale, y }}
-        >
-          <span className={styles.we}>We</span>
-          <span className={styles.got}>Got</span>
-          <span className={styles.married}>Married</span>
-        </motion.div>
+      <motion.div
+        className={styles.content}
+        style={{ opacity, y, scale }}
+      >
+        <span className={styles.inMaui}>...in Maui</span>
 
-        <motion.div
-          className={styles.locationText}
-          style={{ opacity: mauiOpacity, y: mauiY }}
-        >
-          <span className={styles.inMaui}>in Maui...</span>
-          <div className={styles.mauiImage}>
-            <div className={styles.imagePlaceholder}>
-              <span>Maui Memory</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+        <div className={styles.imageContainer}>
+          <img
+            src="/maui_wedding_1.jpeg"
+            alt="Wedding in Maui"
+            className={styles.image}
+          />
+        </div>
+      </motion.div>
     </section>
   )
 }

@@ -5,69 +5,52 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    #F5E6E0 0%,
-    #E8A598 50%,
-    #C9A86C 100%
+  background-color: #8B7355;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    #9A8268 0%,
+    #7A6548 100%
   );
 }
 
-/* Falling confetti field */
-.confettiField {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.confettiPiece {
-  position: absolute;
-  top: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.confettiPiece.square {
-  border-radius: 2px;
-}
-
-.confettiPiece.rectangle {
-  border-radius: 1px;
-}
-
-.confettiPiece.circle {
-  border-radius: 50%;
-}
-
-/* Sparkle field */
-.sparkleField {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.sparkle {
-  position: absolute;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
-}
-
-/* Firework burst rings */
-.burstField {
+/* Fireworks */
+.fireworkField {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
 }
 
-.burstRing {
+.firework {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 3px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fireworkCenter {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(
+    circle,
+    #FFFFFF 0%,
+    #F5E6C8 40%,
+    transparent 70%
+  );
   border-radius: 50%;
-  transform-origin: center;
+  filter: blur(2px);
+}
+
+.fireworkParticle {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 6px currentColor;
 }
 
 /* Main content */
@@ -86,44 +69,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
-}
-
-.now,
-.lets,
-.party {
-  font-family: var(--font-body);
-  font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  gap: var(--space-1);
 }
 
 .now {
+  font-family: var(--font-display);
   font-size: var(--text-4xl);
-  color: var(--color-charcoal);
-  opacity: 0.7;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  color: var(--color-cream);
 }
 
 .lets {
+  font-family: var(--font-display);
   font-size: var(--text-5xl);
-  color: var(--color-charcoal);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  color: var(--color-cream);
 }
 
 .party {
-  font-size: var(--text-8xl);
-  background: linear-gradient(
-    135deg,
-    var(--color-charcoal) 0%,
-    #5C4A3D 50%,
-    var(--color-charcoal) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 500;
+  line-height: 0.9;
+  color: #E8D5A3;
+  text-shadow: 0 2px 40px rgba(232, 213, 163, 0.4);
 }
 
 @media (max-width: 768px) {
+  .section {
+    min-height: auto;
+    padding: var(--space-20) 0;
+  }
+
   .now {
     font-size: var(--text-2xl);
   }
@@ -134,10 +115,5 @@
 
   .party {
     font-size: var(--text-6xl);
-  }
-
-  .burstRing {
-    width: 40px;
-    height: 40px;
   }
 }

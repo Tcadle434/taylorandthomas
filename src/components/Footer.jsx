@@ -22,7 +22,7 @@ function Footer() {
 
           <div className={styles.bottom}>
             <p className={styles.tagline}>
-              Made with <Heart size={14} className={styles.heart} /> in Pittsburgh
+              Made with <Heart size={14} className={styles.heart} /> by Thomas
             </p>
           </div>
         </div>
