@@ -63,8 +63,7 @@ function Schedule() {
                   </div>
                   <h3 className={styles.eventTitle}>Celebration Party</h3>
                   <p className={styles.eventDescription}>
-                    Join us for an evening of cocktails, delicious food, and plenty of dancing
-                    as we celebrate our marriage with the people who mean the most to us.
+                    Join us for an evening of drinks, dancing and food (food trucks lol).
                   </p>
                 </div>
               </div>
@@ -106,9 +105,6 @@ function Schedule() {
           >
             <h3 className={styles.dresscodeTitle}>Dress Code</h3>
             <p className={styles.dresscodeText}>Cocktail Attire</p>
-            <p className={styles.dresscodeDescription}>
-              Dress to celebrate! Think elegant and festive.
-            </p>
           </motion.div>
         </div>
       </div>

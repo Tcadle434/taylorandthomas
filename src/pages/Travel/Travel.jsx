@@ -106,23 +106,6 @@ function Travel() {
           </motion.div>
         </div>
 
-        <motion.div
-          className={styles.mapSection}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
-          <h2 className={styles.mapTitle}>The Strip District</h2>
-          <p className={styles.mapDescription}>
-            Our celebration is in Pittsburgh's historic Strip District, known for its
-            vibrant food scene, unique shops, and lively atmosphere. It's a great area
-            to explore during your visit!
-          </p>
-          <div className={styles.mapPlaceholder}>
-            <MapPin size={32} />
-            <span>Interactive map coming soon</span>
-          </div>
-        </motion.div>
       </div>
     </motion.div>
   )

@@ -14,19 +14,19 @@ const faqs = [
     id: 1,
     question: 'Is this a wedding?',
     answer:
-      "Nope! We're already married. We tied the knot in a beautiful ceremony in Maui. This is a celebration party to share our joy with all of our loved ones who couldn't be there.",
+      "Nope! We already got married with just our immediate families in Maui. This is a celebration and an excuse to get all our friends and relatives together.",
   },
   {
     id: 2,
     question: 'What should I wear?',
     answer:
-      'Cocktail attire - dress to celebrate! Think elegant and festive. We want you to feel comfortable and look fabulous.',
+      'Cocktail attire - dress to celebrate!',
   },
   {
     id: 3,
     question: 'Can I bring a plus one?',
     answer:
-      "Please reach out to Thomas and Taylor if they haven't reached out to you already. We have a list of people we may bring plus ones.",
+      "Please reach out to Thomas and Taylor if they haven't reached out to you already. We have a list of people who may bring plus ones.",
   },
   {
     id: 4,

@@ -234,20 +234,7 @@ function RSVP() {
           transition={{ delay: 0.4 }}
         >
           <span className={styles.deadlineLabel}>Please RSVP by</span>
-          <span className={styles.deadlineDate}>May 1, 2026</span>
-        </motion.div>
-
-        <motion.div
-          className={styles.note}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
-          <h3 className={styles.noteTitle}>Questions?</h3>
-          <p className={styles.noteText}>
-            If you have any questions about your RSVP or need to make changes,
-            please don't hesitate to reach out to us directly.
-          </p>
+          <span className={styles.deadlineDate}>April 15, 2026</span>
         </motion.div>
       </div>
     </motion.div>
