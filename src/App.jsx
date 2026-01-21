@@ -9,6 +9,7 @@ import Travel from './pages/Travel/Travel'
 import Gallery from './pages/Gallery/Gallery'
 import FAQs from './pages/FAQs/FAQs'
 import RSVP from './pages/RSVP/RSVP'
+import Registry from './pages/Registry/Registry'
 import './App.css'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/rsvp" element={<RSVP />} />
+            <Route path="/registry" element={<Registry />} />
           </Routes>
         </AnimatePresence>
       </main>
