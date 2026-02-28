@@ -9,7 +9,7 @@ function Footer() {
         <div className={styles.content}>
           <div className={styles.brand}>
             <span className={styles.names}>Taylor & Thomas</span>
-            <span className={styles.date}>May 29, 2026</span>
+            <span className={styles.date}>June 19, 2026</span>
           </div>
 
           <nav className={styles.nav}>

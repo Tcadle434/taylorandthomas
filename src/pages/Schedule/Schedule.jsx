@@ -12,8 +12,8 @@ function Schedule() {
   const addToCalendar = () => {
     const event = {
       title: 'Taylor & Thomas Celebration',
-      start: '2026-05-29T19:00:00',
-      end: '2026-05-29T22:00:00',
+      start: '2026-06-19T19:00:00',
+      end: '2026-06-19T22:00:00',
       location: 'Bar Marco, 2216 Penn Ave, Pittsburgh, PA 15222',
       description: 'Join us for a celebration of our marriage!',
     }
@@ -48,7 +48,7 @@ function Schedule() {
             <div className={styles.cardHeader}>
               <div className={styles.dateDisplay}>
                 <span className={styles.day}>Friday</span>
-                <span className={styles.date}>May 29</span>
+                <span className={styles.date}>June 19</span>
                 <span className={styles.year}>2026</span>
               </div>
             </div>
@@ -63,7 +63,7 @@ function Schedule() {
                   </div>
                   <h3 className={styles.eventTitle}>Celebration Party</h3>
                   <p className={styles.eventDescription}>
-                    Join us for an evening of drinks, dancing and food (food trucks lol).
+                    Join us for an evening of drinks, dancing, and food.
                   </p>
                 </div>
               </div>
