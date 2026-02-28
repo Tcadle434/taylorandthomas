@@ -62,13 +62,13 @@ function Travel() {
             </div>
             <h2 className={styles.cardTitle}>Nearby Hotel</h2>
             <div className={styles.cardContent}>
-              <h3 className={styles.hotelName}>Hampton by Hilton</h3>
+              <h3 className={styles.hotelName}>Homewood Suites by Hilton</h3>
               <address className={styles.hotelAddress}>
                 <MapPin size={14} />
-                <span>1247 Smallman St<br />Pittsburgh, PA 15222</span>
+                <span>1410 Smallman St<br />Pittsburgh, PA 15222</span>
               </address>
               <a
-                href="https://www.hilton.com/en/hotels/pitdnhx-hampton-suites-pittsburgh-downtown/"
+                href="https://www.hilton.com/en/hotels/pitdohw-homewood-suites-pittsburgh-downtown/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-gold"
@@ -91,13 +91,13 @@ function Travel() {
             </div>
             <h2 className={styles.cardTitle}>Nearby Hotel</h2>
             <div className={styles.cardContent}>
-              <h3 className={styles.hotelName}>Homewood Suites by Hilton</h3>
+              <h3 className={styles.hotelName}>Hampton by Hilton</h3>
               <address className={styles.hotelAddress}>
                 <MapPin size={14} />
-                <span>1410 Smallman St<br />Pittsburgh, PA 15222</span>
+                <span>1247 Smallman St<br />Pittsburgh, PA 15222</span>
               </address>
               <a
-                href="https://www.hilton.com/en/hotels/pitdohw-homewood-suites-pittsburgh-downtown/"
+                href="https://www.hilton.com/en/hotels/pitdnhx-hampton-suites-pittsburgh-downtown/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-gold"
