@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Plane, Hotel, Phone, ExternalLink, MapPin } from 'lucide-react'
+import { Plane, Hotel, ExternalLink, MapPin } from 'lucide-react'
 import styles from './Travel.module.css'
 
 const pageVariants = {
@@ -51,7 +51,7 @@ function Travel() {
           </motion.div>
 
           <motion.div
-            className={styles.card}
+            className={`${styles.card} ${styles.hotelCard}`}
             variants={cardVariants}
             initial="initial"
             animate="animate"
@@ -60,13 +60,22 @@ function Travel() {
             <div className={styles.cardIcon}>
               <Hotel size={28} />
             </div>
-            <h2 className={styles.cardTitle}>Hotel Block</h2>
+            <h2 className={styles.cardTitle}>Nearby Hotel</h2>
             <div className={styles.cardContent}>
-              <div className={styles.comingSoon}>Coming Soon</div>
-              <p className={styles.cardDescription}>
-                Thomas is working on securing a hotel block for our guests.
-                Check back soon for details!
-              </p>
+              <h3 className={styles.hotelName}>Hampton by Hilton</h3>
+              <address className={styles.hotelAddress}>
+                <MapPin size={14} />
+                <span>1247 Smallman St<br />Pittsburgh, PA 15222</span>
+              </address>
+              <a
+                href="https://www.hilton.com/en/hotels/pitdnhx-hampton-suites-pittsburgh-downtown/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-gold"
+              >
+                <ExternalLink size={16} />
+                View Hotel
+              </a>
             </div>
           </motion.div>
 
@@ -82,19 +91,13 @@ function Travel() {
             </div>
             <h2 className={styles.cardTitle}>Nearby Hotel</h2>
             <div className={styles.cardContent}>
-              <h3 className={styles.hotelName}>AC Hotel Pittsburgh Downtown</h3>
+              <h3 className={styles.hotelName}>Homewood Suites by Hilton</h3>
               <address className={styles.hotelAddress}>
                 <MapPin size={14} />
-                <span>1126 Smallman Street<br />Pittsburgh, PA 15222</span>
+                <span>1410 Smallman St<br />Pittsburgh, PA 15222</span>
               </address>
-              <div className={styles.hotelContact}>
-                <Phone size={14} />
-                <a href="tel:+14122819300" className={styles.phoneLink}>
-                  (412) 281-9300
-                </a>
-              </div>
               <a
-                href="https://www.marriott.com/hotels/travel/pitac-ac-hotel-pittsburgh-downtown/"
+                href="https://www.hilton.com/en/hotels/pitdohw-homewood-suites-pittsburgh-downtown/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-gold"
