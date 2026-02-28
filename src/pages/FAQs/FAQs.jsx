@@ -32,13 +32,7 @@ const faqs = [
     id: 4,
     question: 'Will there be food and drinks?',
     answer:
-      "Absolutely! We'll have an open bar and food trucks.",
-  },
-  {
-    id: 5,
-    question: 'Is parking available?',
-    answer:
-      'Yes, there is parking available near Kingfly Spirits. The Strip District also has street parking and nearby parking lots.',
+      "Absolutely! We'll have an open bar and food.",
   },
   ]
 

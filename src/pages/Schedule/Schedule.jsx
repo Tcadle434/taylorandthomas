@@ -14,7 +14,7 @@ function Schedule() {
       title: 'Taylor & Thomas Celebration',
       start: '2026-05-29T19:00:00',
       end: '2026-05-29T22:00:00',
-      location: 'Kingfly Spirits, 2613 Smallman St, Pittsburgh, PA 15222',
+      location: 'Bar Marco, 2216 Penn Ave, Pittsburgh, PA 15222',
       description: 'Join us for a celebration of our marriage!',
     }
 
@@ -72,14 +72,14 @@ function Schedule() {
             <div className={styles.venue}>
               <div className={styles.venueHeader}>
                 <MapPin className={styles.venueIcon} size={24} />
-                <h3 className={styles.venueName}>Kingfly Spirits</h3>
+                <h3 className={styles.venueName}>Bar Marco</h3>
               </div>
               <address className={styles.venueAddress}>
-                2613 Smallman St<br />
+                2216 Penn Ave<br />
                 Pittsburgh, PA 15222
               </address>
               <a
-                href="https://maps.google.com/?q=Kingfly+Spirits+2613+Smallman+St+Pittsburgh+PA+15222"
+                href="https://maps.google.com/?q=Bar+Marco+2216+Penn+Ave+Pittsburgh+PA+15222"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.venueLink}
