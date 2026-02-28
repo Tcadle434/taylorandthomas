@@ -36,7 +36,7 @@ function InvitationSection() {
               <Calendar className={styles.detailIcon} size={20} />
               <div>
                 <span className={styles.detailLabel}>Date</span>
-                <span className={styles.detailValue}>May 29, 2026</span>
+                <span className={styles.detailValue}>June 19, 2026</span>
               </div>
             </div>
 
