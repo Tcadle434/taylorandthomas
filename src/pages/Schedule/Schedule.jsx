@@ -104,7 +104,7 @@ function Schedule() {
             transition={{ delay: 0.4 }}
           >
             <h3 className={styles.dresscodeTitle}>Dress Code</h3>
-            <p className={styles.dresscodeText}>Cocktail Attire</p>
+            <p className={styles.dresscodeText}>Semi Formal</p>
           </motion.div>
         </div>
       </div>
